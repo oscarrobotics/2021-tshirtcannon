@@ -14,18 +14,16 @@ import edu.wpi.first.wpilibj.util.Units;
 import edu.wpi.first.wpiutil.math.MathUtil;
 import edu.wpi.first.wpiutil.math.numbers.N1;
 import edu.wpi.first.wpiutil.math.numbers.N2;
-import frc.team832.lib.drive.ClosedLoopDT;
-import frc.team832.lib.motors.Gearbox;
-import frc.team832.lib.motors.Motor;
-import frc.team832.lib.motors.WheeledPowerTrain;
-import frc.team832.lib.power.PDPPortNumber;
-import frc.team832.lib.util.ClosedLoopConfig;
-import frc.team832.lib.util.OscarMath;
 
 import javax.sound.midi.Track;
 
 @SuppressWarnings("unused")
 public class Constants {
+
+    @SuppressWarnings("unused")
+    public static class Cannon {
+        public static double ControlLoopPeriod = 0.01;
+        }
 
     @SuppressWarnings("unused")
     public static class PneumaticsValues {
