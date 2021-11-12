@@ -27,7 +27,8 @@ public class RobotContainer {
     public Attack3 leftStick;
     public Extreme3DPro rightStick;
 
-    public final CannonSubsystem cannon = new CannonSubsystem();
+    public final CannonSubsystem cannon = new CannonSubsystem(pdp);
+
 
     public RobotContainer() {
         if (isSticks) {
@@ -42,8 +43,8 @@ public class RobotContainer {
     }
 
     private void configOperatorCommands() {
-        // stratComInterface.getSingleToggle().whenHeld(
+//        stratComInterface.getSingleToggle().whenHeld(
             // stratComInterface.getArcardeBlackLeft.whenReleased();
-        // );
+//        );
     }
 }
