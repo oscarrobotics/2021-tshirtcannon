@@ -18,7 +18,7 @@ import frc.team832.robot.subsystems.*;
 public class RobotContainer {
 
     public final GrouchPDP pdp = new GrouchPDP(0);
-    public final Compressor pcm = new Compressor(0);
+    public final Compressor compressor = new Compressor(0);
 
     public final DriverOI driverOI;
     public static final boolean isSticks = RobotBase.isReal();
@@ -43,8 +43,5 @@ public class RobotContainer {
     }
 
     private void configOperatorCommands() {
-//        stratComInterface.getSingleToggle().whenHeld(
-            // stratComInterface.getArcardeBlackLeft.whenReleased();
-//        );
     }
 }

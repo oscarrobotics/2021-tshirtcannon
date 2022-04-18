@@ -9,21 +9,18 @@ package frc.team832.robot;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.team832.lib.CANDevice;
 import frc.team832.lib.motorcontrol.NeutralMode;
-import frc.team832.robot.commands.AutoShootCommandGroup;
-import frc.team832.robot.commands.DumbAutoCommand;
 import frc.team832.robot.subsystems.*;
 
 public class Robot extends TimedRobot {
 
   public final RobotContainer robotContainer = new RobotContainer();
 
-  private final Compressor pcm = robotContainer.pcm;
-
-  private final Command autoCommand = new DumbAutoCommand(drivetrain, superStructure);
+  private final Compressor compressor = robotContainer.compressor;
 
   @Override
   public void robotInit() {
@@ -37,7 +34,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousInit() {
-    autoCommand.schedule();
   }
 
   @Override
@@ -45,7 +41,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopInit() {
-    autoCommand.cancel();
   }
 
   @Override
