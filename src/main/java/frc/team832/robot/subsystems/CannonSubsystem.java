@@ -34,18 +34,18 @@ public class CannonSubsystem extends SubsystemBase {
     }
 
     public void closeFiringValve() {
-        fireSolenoid.set(true);
-    }
-
-    public void openFiringValve() {
         fireSolenoid.set(false);
     }
 
+    public void openFiringValve() {
+        fireSolenoid.set(true);
+    }
+
     public void closeFillValve() {
-        fillSolenoid.set(true);
+        fillSolenoid.set(false);
     }
 
     public void openFillValve() {
-        fillSolenoid.set(false);
+        fillSolenoid.set(true);
     }
 }
