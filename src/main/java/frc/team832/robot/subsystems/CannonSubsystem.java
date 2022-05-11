@@ -16,12 +16,7 @@ public class CannonSubsystem extends SubsystemBase {
     private final AnalogInput firingPressureSensor = new AnalogInput(2);
 
     public CannonSubsystem() {
-        setDefaultCommand(new RunCommand(
-            () -> {
-                closeFiringValve(); 
-                closeFillValve();
-            }, this
-        ));
+        
     }
 
     public void periodic() {
